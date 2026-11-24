@@ -1,8 +1,20 @@
+
+# Archivos temporales de Python
 __pycache__/
-*.py[cod]
-.venv/
+*.pyc
+*.pyo
+
+# Entornos virtuales
 venv/
-.env
-logs/*.log
-!.gitkeep
+.venv/
+
+# Configuraciones locales
 .vscode/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

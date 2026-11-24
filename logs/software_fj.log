@@ -1,0 +1,954 @@
+2026-11-24 13:26:34,730 | INFO | Sistema iniciado.
+2026-11-24 13:26:34,732 | INFO | Cliente registrado: 1001
+2026-11-24 13:26:34,732 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 46, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 61, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:26:34,836 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 47, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 77, in telefono
+    raise ErrorValidacion(
+        "El teléfono debe tener entre 7 y 15 dígitos."
+    )
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:26:34,837 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:28:32,741 | INFO | Sistema iniciado.
+2026-11-24 13:28:32,743 | INFO | Cliente registrado: 1001
+2026-11-24 13:28:32,743 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 46, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 61, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:28:32,759 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 47, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 77, in telefono
+    raise ErrorValidacion(
+        "El teléfono debe tener entre 7 y 15 dígitos."
+    )
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:28:32,762 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:29:44,562 | INFO | Sistema iniciado.
+2026-11-24 13:29:44,562 | INFO | Cliente registrado: 1001
+2026-11-24 13:29:44,563 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 46, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 61, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:29:44,568 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 47, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 77, in telefono
+    raise ErrorValidacion(
+        "El teléfono debe tener entre 7 y 15 dígitos."
+    )
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:29:44,570 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:32:20,271 | INFO | Sistema iniciado.
+2026-11-24 13:32:20,272 | INFO | Cliente registrado: 1001
+2026-11-24 13:32:20,273 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 46, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 61, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:32:20,278 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 47, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 77, in telefono
+    raise ErrorValidacion(
+        "El teléfono debe tener entre 7 y 15 dígitos."
+    )
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:32:20,280 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:38:37,256 | INFO | Sistema iniciado.
+2026-11-24 13:38:37,258 | INFO | Cliente registrado: 1001
+2026-11-24 13:38:37,258 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:38:37,268 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:38:37,272 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:38:37,276 | INFO | Servicio agregado: S01
+2026-11-24 13:38:37,277 | INFO | Servicio agregado: E01
+2026-11-24 13:38:37,279 | INFO | Servicio agregado: A01
+2026-11-24 13:38:37,280 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:38:37,284 | INFO | Reserva creada: R001
+2026-11-24 13:38:37,285 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:38:37,287 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:38:37,292 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:38:37,294 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:38:37,295 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:38:37,298 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:38:37,300 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:38:37,301 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:38:37,309 | INFO | Reserva creada: R004
+2026-11-24 13:38:37,309 | INFO | Terminó el intento de crear reserva: R004
+2026-11-24 13:39:04,136 | INFO | Sistema iniciado.
+2026-11-24 13:39:04,137 | INFO | Cliente registrado: 1001
+2026-11-24 13:39:04,137 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:39:04,146 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:39:04,149 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:39:04,157 | INFO | Servicio agregado: S01
+2026-11-24 13:39:04,158 | INFO | Servicio agregado: E01
+2026-11-24 13:39:04,159 | INFO | Servicio agregado: A01
+2026-11-24 13:39:04,160 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:39:04,168 | INFO | Reserva creada: R001
+2026-11-24 13:39:04,169 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:39:04,170 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:39:04,173 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:39:04,174 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:39:04,175 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:39:04,185 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:39:04,186 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:39:04,186 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:39:04,202 | INFO | Reserva creada: R004
+2026-11-24 13:39:04,202 | INFO | Terminó el intento de crear reserva: R004
+2026-11-24 13:42:15,030 | INFO | Sistema iniciado.
+2026-11-24 13:42:15,031 | INFO | Cliente registrado: 1001
+2026-11-24 13:42:15,031 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:42:15,040 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:42:15,042 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:42:15,046 | INFO | Servicio agregado: S01
+2026-11-24 13:42:15,046 | INFO | Servicio agregado: E01
+2026-11-24 13:42:15,047 | INFO | Servicio agregado: A01
+2026-11-24 13:42:15,047 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:42:15,050 | INFO | Reserva creada: R001
+2026-11-24 13:42:15,051 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:42:15,051 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:42:15,055 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:42:15,057 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:42:15,057 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:42:15,061 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:42:15,062 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:42:15,062 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:42:15,065 | INFO | Reserva creada: R004
+2026-11-24 13:42:15,065 | INFO | Terminó el intento de crear reserva: R004
+2026-11-24 13:51:46,988 | INFO | Sistema iniciado.
+2026-11-24 13:51:46,990 | INFO | Cliente registrado: 1001
+2026-11-24 13:51:46,990 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:51:47,001 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:51:47,005 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:51:47,066 | INFO | Servicio agregado: S01
+2026-11-24 13:51:47,114 | INFO | Servicio agregado: E01
+2026-11-24 13:51:47,165 | INFO | Servicio agregado: A01
+2026-11-24 13:51:47,232 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:51:47,286 | INFO | Reserva creada: R001
+2026-11-24 13:51:47,286 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:51:47,365 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:51:47,371 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:51:47,372 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:51:47,372 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:51:47,388 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:51:47,390 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:51:47,391 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:51:47,399 | INFO | Reserva creada: R004
+2026-11-24 13:51:47,400 | INFO | Terminó el intento de crear reserva: R004
+2026-11-24 13:53:38,128 | INFO | Sistema iniciado.
+2026-11-24 13:53:38,129 | INFO | Cliente registrado: 1001
+2026-11-24 13:53:38,129 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:53:38,135 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:53:38,137 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:53:38,139 | INFO | Servicio agregado: S01
+2026-11-24 13:53:38,139 | INFO | Servicio agregado: E01
+2026-11-24 13:53:38,140 | INFO | Servicio agregado: A01
+2026-11-24 13:53:38,140 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:53:38,142 | INFO | Reserva creada: R001
+2026-11-24 13:53:38,143 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:53:38,144 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:53:38,146 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:53:38,147 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:53:38,147 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:53:38,149 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:53:38,150 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:53:38,150 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:53:38,153 | INFO | Reserva creada: R004
+2026-11-24 13:53:38,153 | INFO | Terminó el intento de crear reserva: R004
+2026-11-24 13:54:46,112 | INFO | Sistema iniciado.
+2026-11-24 13:54:46,113 | INFO | Cliente registrado: 1001
+2026-11-24 13:54:46,114 | ERROR | Operación 2 fallida: Correo inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 23, in <lambda>
+    intento(2, "Correo inválido", lambda: Cliente("1002", "Carlos", "correo-mal", "3111234567"))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 29, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 38, in correo
+    raise ErrorValidacion("El correo electrónico no es válido.")
+excepciones.ErrorValidacion: El correo electrónico no es válido.
+2026-11-24 13:54:46,124 | ERROR | Operación 3 fallida: Teléfono inválido
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 24, in <lambda>
+    intento(3, "Teléfono inválido", lambda: Cliente("1003", "Ana", "ana@gmail.com", "12"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 30, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\entidades.py", line 48, in telefono
+    raise ErrorValidacion("El teléfono debe tener entre 7 y 15 dígitos.")
+excepciones.ErrorValidacion: El teléfono debe tener entre 7 y 15 dígitos.
+2026-11-24 13:54:46,130 | ERROR | Operación 4 fallida: Cliente duplicado
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 25, in <lambda>
+    intento(4, "Cliente duplicado", lambda: sistema.registrar_cliente(
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("1001", "Laura", "laura@gmail.com", "3101234567")).nombre)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 18, in registrar_cliente
+    raise ClienteDuplicadoError("El cliente ya está registrado.")
+excepciones.ClienteDuplicadoError: El cliente ya está registrado.
+2026-11-24 13:54:46,137 | INFO | Servicio agregado: S01
+2026-11-24 13:54:46,138 | INFO | Servicio agregado: E01
+2026-11-24 13:54:46,139 | INFO | Servicio agregado: A01
+2026-11-24 13:54:46,139 | ERROR | Operación 8 fallida: Validar capacidad incorrecta
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 34, in <lambda>
+    intento(8, "Validar capacidad incorrecta", lambda: sala.validar_parametros(personas=20))
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 46, in validar_parametros
+    raise ErrorValidacion("Cantidad de personas inválida para la capacidad de la sala.")
+excepciones.ErrorValidacion: Cantidad de personas inválida para la capacidad de la sala.
+2026-11-24 13:54:46,147 | INFO | Reserva creada: R001
+2026-11-24 13:54:46,148 | INFO | Terminó el intento de crear reserva: R001
+2026-11-24 13:54:46,149 | ERROR | Operación 12 fallida: Cancelar reserva procesada
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 40, in <lambda>
+    intento(12, "Cancelar reserva procesada", lambda: r1.cancelar())
+                                                      ~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 26, in cancelar
+    raise OperacionNoPermitidaError("No se puede cancelar en el estado actual.")
+excepciones.OperacionNoPermitidaError: No se puede cancelar en el estado actual.
+2026-11-24 13:54:46,153 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+2026-11-24 13:54:46,159 | INFO | Terminó el intento de crear reserva: R002
+2026-11-24 13:54:46,160 | ERROR | Operación 13 fallida: Cliente inexistente (encadenamiento)
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 42, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 26, in buscar_cliente
+    raise ClienteNoEncontradoError(f"Cliente {identificacion} no encontrado.")
+excepciones.ClienteNoEncontradoError: Cliente 9999 no encontrado.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 42, in <lambda>
+    intento(13, "Cliente inexistente (encadenamiento)", lambda: sistema.crear_reserva(
+                                                                ~~~~~~~~~~~~~~~~~~~~~^
+        "R002", "9999", "A01", 1, {"tema": "Seguridad"}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:54:46,163 | ERROR | Error en validación de reserva.
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+2026-11-24 13:54:46,165 | INFO | Terminó el intento de crear reserva: R003
+2026-11-24 13:54:46,165 | ERROR | Operación 14 fallida: Servicio no disponible
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 44, in crear_reserva
+    reserva = Reserva(codigo, cliente, servicio, duracion, parametros, descuento, impuesto)
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\reservas.py", line 10, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\servicios.py", line 18, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"Servicio no disponible: {self.nombre}")
+excepciones.ServicioNoDisponibleError: Servicio no disponible: Video beam
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 15, in intento
+    resultado = accion()
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\main.py", line 45, in <lambda>
+    intento(14, "Servicio no disponible", lambda: sistema.crear_reserva(
+                                                  ~~~~~~~~~~~~~~~~~~~~~^
+        "R003", "1001", "E01", 1, {"cantidad": 1}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OSCAR DE MONI\Desktop\UNAD\Programación\Fase 4\Fase_4\Software-FJ-Fase4\sistema.py", line 47, in crear_reserva
+    raise ErrorValidacion("No fue posible validar la reserva.") from error
+excepciones.ErrorValidacion: No fue posible validar la reserva.
+2026-11-24 13:54:46,177 | INFO | Reserva creada: R004
+2026-11-24 13:54:46,177 | INFO | Terminó el intento de crear reserva: R004
