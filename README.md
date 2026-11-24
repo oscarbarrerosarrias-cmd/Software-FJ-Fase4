@@ -33,7 +33,7 @@ El sistema permite administrar:
 - Git y GitHub.
 
 ### Integrantes
-1. [Oscar Alexander barrero Sarrias]
+1. [Oscar Alexander Barrero Sarrias]
 2. [Nombre del estudiante 2]
 3. [Nombre del estudiante 3]
 4. [Nombre del estudiante 4]
